@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #333;
+}
+
+nav {
+    background-color: #ff7043;
+    width: 100%;
+    height: 4em;
+    padding: 1em;
+}
+
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    display: inline;
+    margin: auto 30px;
+    color: #fff;
+    border-bottom: 2px solid #444;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.05em;
+}
+
+.nav-menu li:first-child {
+    font-size: 2em;
+    margin-left: 0;
+    margin-right: 0.2em;
+    font-weight: 500;
+    border: none;
+}
+
+.login, .register {
+    border: none;
+    border-radius: 5px;
+    width: 10em;
+    height: 3em;
+    background: #ff7043;
+    color: #fff;
+    font-size: 1em;
+}
+
+.login-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://okcredit-blog-images-prod.storage.googleapis.com/2021/04/ecommerce3-1.jpg");
+    background-size: cover;
+}
+
+.login-list li {
+    display: inline-block;
+    margin: 50px;
+}
+
+.login:hover, .register:hover {
+    background: #ff5043;
+}
+
+.form-panel {
+    position: absolute;
+    width: 35%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-panel form {
+    display: inline-flex;
+}
+
+.form-panel h2 {
+    font-size: 2em;
+    color:#ff7043;
+}
+
+#close-register-form, #close-login-form {
+    border: none;
+    width: 100px;
+    height: 30px;
+    background-color: #ff5043;
+    color: #fff;
+    font-size: 20px;
+}
