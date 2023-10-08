@@ -290,12 +290,12 @@ footer {
 }
 
 #tech {
-  background-image: url(/assets/tecnologias.webp);
+  background-image: url(./assets/tecnologias.webp);
   margin-bottom: 20px;
 }
 
 #super {
-  background-image: url(/assets/supermercado.webp);
+  background-image: url(./assets/supermercado.webp);
 }
 
 .wrapper-categories .types-categories article::before {
