@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/*Background de la página*/
+body {
+    background: #333;
+    background-image: url("assets/background.jpg");
+    background-size: cover;
+}
+/*Texto de bienvenida*/
+h1 {
+    margin-left: 29%;
+    margin-top: 90px;
+    font-size: 45px;
+    color: #fff;
+}
+/*Nav*/
+nav {
+    background-color: #ff7043;
+    width: 100%;
+    height: 4em;
+    padding: 1em;
+}
+/*La lista del nav*/
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+/*Los elementos de la lista del nav*/
+.nav-menu li {
+    display: inline;
+    margin: auto 10px;
+    color: #fff;
+    border-bottom: 2px solid #444;
+}
+/*Los elementos de la lista del nav, solo los "a"*/
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+/*El primer elemento de la lista del nav*/
+.nav-menu li:first-child {
+    font-size: 2em;
+    margin-left: 0;
+    margin-right: 0.2em;
+    font-weight: 500;
+    border: none;
+}
+/*Botones de login y register*/
+.login, .register {
+    border: none;
+    border-radius: 5px;
+    width: 10em;
+    height: 3em;
+    background: #ff7043;
+    color: #fff;
+    font-size: 1em;
+}
+/*El contenedor de la lista de login y register*/
+.login-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Los elementos de la lista de login y register*/
+.login-list li {
+    display: inline-block;
+    margin: 50px;
+}
+/*Los elementos login y register al ser enfocados*/
+.login:hover, .register:hover {
+    background: #ff5043;
+}
+/*El panel de la INTERFAZ de login y register*/
+.form-panel {
+    position: absolute;
+    width: 35%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/*Los inputs de texto y contraseña de la interfaz*/
+.input {
+    display: block;
+    margin: 40px 30px;
+    width: 22em;
+    height: 3em;
+    font-size: 1em;
+    padding: 20px;
+}
+/*El submit de la interfaz*/
+.submit {
+    display: block;
+    width: 14em;
+    height: 3em;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    border: 2px solid #ff7043;
+    background: #ff6043;
+    color: #fff;
+    font-size: 0.9em;
+}
+/*submit al ser enfocado*/
+.submit:hover {
+    display: block;
+    width: 14em;
+    height: 3em;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    border: 2px solid #ff7043;
+    background: #ffc043;
+    color: #fff;
+    font-size: 0.9em;
+}
+/*El subtítulo de la interfaz*/
+.form-panel h2 {
+    font-size: 2em;
+    color:#ff7043;
+}
+/*Los botones de cerrado de la interfaz*/
+#close-register-form, #close-login-form {
+    border: none;
+    width: 100px;
+    height: 35px;
+    background-color: #ff5043;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 3px;
+}
+/*Los botones de cerrado al ser enfocados*/
+#close-login-form:hover, #close-register-form:hover {
+    border: none;
+    width: 100px;
+    height: 35px;
+    background-color: #ff3043;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 3px;
+}
+
+/*El "Intento" de responsive*/
+
+@media only screen and (max-width: 1150px) {
+    /*Botones de registro e login*/
+    .login, .register{
+        display: block;
+    }
+    /*Interfaz*/
+    .form-panel {
+        width: 50%;
+        height: 70%;
+    }
+    /*Inputs*/
+    .input {
+        width: 300px;
+        height: 100%;
+    }
+    nav {
+        height: 25%;
+    }
+    /*Todos los elementos dentro de una lista*/
+    ul li {
+        font-size: 20px;
+    }
+    /*Los elementos dentro de la lista de login y register*/
+    .login-list li {
+        display: inline-block;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 806px){
+    /*Título de bienvenida*/
+    h1 {
+        margin: 0;
+        font-size: 35px;
+        margin: 30px 20px;
+    }
+}
+
+@media only screen and (max-width: 705px) {
+    /*Directamente los botones de registro y login*/
+    .login-list li button {
+        margin: 10px auto;
+    }
+    /*Elementos del nav*/
+    .nav-menu li {
+        display: block;
+        border: none;
+    }
+    /*Interfaz del form*/
+    .form-panel {
+        width: 100%;
+        height: 65vh;
+    }
+}
+
+@media only screen and (max-width:447px){
+    .input { margin-left: 10px;}
+    .form-panel { height: 30em;}
+    .login-container {margin-left: 18vw;}
+}
