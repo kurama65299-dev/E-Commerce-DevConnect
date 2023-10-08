@@ -203,3 +203,10 @@ a {
         height: 70%;
     }
 }
+
+@media only screen and (max-width:400px){
+    .input { margin-left: 10px;}
+    .form-panel { height: 30em;}
+    .login-container {margin-left: 18vw;}
+    h1 {margin: 30px 20px;}
+}
