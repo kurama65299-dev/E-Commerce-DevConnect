@@ -7,17 +7,21 @@
     <title>Welcome | E-Commerce</title>
 </head>
 <body>
+    <!--Nav-->
     <nav>
         <ul class="nav-menu">
-            <li>E-Commerce</li>
-            <li><a href="">Suscripción</a></li>
-            <li><a href="">Políticas de seguridad</a></li>
-            <li><a href="">Reporte de errores</a></li>
-            <li><a href="">Nuestra app</a></li>
-            <li><a href="">Contáctenos</a></li>
+            <li class="nav-title">E-Commerce</li>
+            <li class="li"><a href="">Suscripción</a></li>
+            <li class="li"><a href="">Políticas de seguridad</a></li>
+            <li class="li"><a href="">Reporte de errores</a></li>
+            <li class="li"><a href="">Nuestra app</a></li>
+            <li class="li"><a href="">Contáctenos</a></li>
         </ul>
     </nav>
 
+    <!--Texto de bienvenida-->
+    <h1>Bienvenido a nuestro proyecto</h1>
+    <!--Botones de login e register-->
     <div class="login-container">
         <ul class="login-list">
             <li><button class="login" id="login-btn">Log in</button></li>
@@ -25,21 +29,29 @@
         </ul>
     </div>
     
-
+    <!--Form del login-->
     <div id="login-panel" class="form-panel">
         <h2>Log in</h2>
         <form>
+            <input class="input" type="text" placeholder="Nombre de usuario:">
+            <input class="input" type="password" placeholder="Contraseña:">
+            <input class="submit" type="submit" value="Log in">
             <button type="button" id="close-login-form">Cerrar</button>
         </form>
     </div>
-    
+
+    <!--Form del register-->
     <div id="register-panel" class="form-panel">
         <h2>Register</h2>
         <form>
+            <input class="input" type="text" placeholder="Nombre de usuario:">
+            <input class="input" type="password" placeholder="Contraseña:">
+            <input class="submit" type="submit" value="Register">
             <button type="button" id="close-register-form">Cerrar</button>
         </form>
-    </div>    
-    
+    </div>
+
+    <!--Vinculación con JS-->
     <script src="welcome.js"></script>
 </body>
 </html>

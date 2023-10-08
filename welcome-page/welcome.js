@@ -1,3 +1,5 @@
+//Al presionar register/login se activa el display de
+//las interfaces de login y register
 const loginButton = document.getElementById('login-btn');
 const registerButton = document.getElementById('register-btn');
 
@@ -14,6 +16,8 @@ registerButton.addEventListener('click', () => {
     loginPanel.style.display = 'none';
 });
 
+
+//Al hacer click en los botones de cerrar= display=none;
 const closeLoginFormButton = document.getElementById('close-login-form');
 const closeRegisterFormButton = document.getElementById('close-register-form');
 
