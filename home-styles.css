@@ -1,0 +1,656 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  background: #FF7043;
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  left: -100%;
+  transition: .3s ease-in-out;
+  z-index: 10;
+  border-bottom: 2px solid black;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.left nav ul {
+  display: flex;
+  list-style: none;
+  font-weight: 600;
+  flex-direction: column;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 0;
+}
+
+nav ul li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.left .logo a h2 {
+  font-size: 20px;
+  transition: .3s ease-in-out;
+}
+
+.left .logo a {
+  text-decoration: none;
+  color: black;
+}
+
+.left .logo a h2:hover {
+  scale: 1.1;
+}
+
+form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+form input {
+  min-width: 200px;
+  background: #ffffff63;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 7px 35px;
+}
+
+form svg {
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  padding: 3px;
+  margin-left: 7px;
+  border-radius: 4px;
+}
+
+
+form input::placeholder {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.account a {
+  display: flex;
+  align-items: center;
+  color: black;
+  padding: 0 8px;
+}
+
+.bg-profile {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.right-account {
+  padding: 10px 0;
+  display: flex;
+}
+
+header #bars {
+  position: absolute;
+  display: block;
+  right: -45px;
+  top: 0;
+  margin: 10px 10px;
+}
+
+header.active #bars {
+  right: 0;
+}
+
+header.active {
+  left: 0;
+}
+
+#container-offers {
+  width: 100%;
+  margin-top: -100px;
+}
+
+#container-offers .offers {
+  background: #FF7043;
+  width: 100%;
+  min-height: 0;
+  max-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.offers .left-o h2 {
+  max-width: 7ch;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.offers .left-o button {
+  font-size: 11px;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.offers .left-o button:hover {
+  scale: 1.1;
+  background: black;
+  color: #FF7043;
+}
+
+.offers .right-o {
+  display: flex;
+  flex-direction: column;
+}
+
+.offers .right-o .cards {
+  background: black;
+  color: #fff;
+  width: 120px;
+  font-size: 30px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .5);
+}
+
+.card-1 {
+  height: 120px;
+  transform: translate(20px, -20px);
+  border-radius: 10px;
+}
+
+.card-2 {
+  height: 120px;
+  transform: translate(-10px, 0px);
+  border-radius: 10px;
+}
+
+#card-3 {
+  display: none;
+}
+
+#products-stock {
+  width: 100%;
+  min-height: 60vh;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper-stock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper-stock h2 {
+  background: #ff6f43b7;
+  padding: 2px 8px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  gap: 10px;
+}
+
+.wrapper-stock .cards {
+  width: 100px;
+  height: 100px;
+  background: black;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .5);
+}
+
+footer {
+  width: 100%;
+  background: #FF7043;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.container-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.categories {
+  margin-top: -200px;
+  width: 100%;
+  min-height: 70vh;
+}
+
+.wrapper-categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-categories h2 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.wrapper-categories .types-categories article {
+  transition: .3s ease-in-out;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#tech {
+  background-image: url(/assets/tecnologias.webp);
+  margin-bottom: 20px;
+}
+
+#super {
+  background-image: url(/assets/supermercado.webp);
+}
+
+.wrapper-categories .types-categories article::before {
+  content: "";
+  background: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: .7;
+}
+
+.wrapper-categories .types-categories article:hover {
+  scale: 1.1;
+}
+
+.wrapper-categories .types-categories article h4 {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+footer .logo a {
+  text-decoration: none;
+  color: black;
+}
+
+footer .logo a h2 {
+  font-size: 20px;
+  transition: .3s ease-in-out;
+}
+
+footer .logo a h2:hover {
+  scale: 1.1;
+}
+
+footer .rights p {
+  font-size: 8px;
+}
+
+@media screen and (width >=425px) {
+
+  .products {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    gap: 10px;
+  }
+
+  .wrapper-stock .cards {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+  }
+
+  footer .rights p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (width >=768px) {
+
+  header {
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    left: -100%;
+    transition: .3s ease-in-out;
+  }
+
+  #container-offers .offers {
+    max-height: 300px;
+  }
+
+  .offers .right-o .cards {
+    width: 170px;
+  }
+
+  .card-1 {
+    height: 170px;
+    transform: translate(50px, -20px);
+  }
+
+  .card-2 {
+    height: 170px;
+    transform: translate(-20px, 0px);
+  }
+
+  .offers .left-o h2 {
+    font-size: 30px;
+  }
+
+  .offers .left-o button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    gap: 10px;
+  }
+
+  .wrapper-stock .cards {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+  }
+
+  .bot-1 {
+    grid-column: 2;
+  }
+
+  .bot-2 {
+    grid-column: 3;
+  }
+
+  .types-categories {
+    display: flex;
+  }
+
+  .wrapper-categories .types-categories article {
+    margin: 0 5px;
+  }
+
+  #tech {
+    margin-bottom: 0;
+  }
+
+  footer {
+    padding: 25px;
+  }
+}
+
+@media screen and (width >=1024px) {
+
+  header {
+    height: auto;
+    padding: 15px 20px;
+    top: 0;
+    z-index: 10;
+    left: 0;
+    justify-content: space-between;
+    border-bottom: none;
+  }
+
+  header #bars {
+    display: none;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .left nav ul {
+    flex-direction: row;
+    padding: 0 15px;
+  }
+
+  nav ul li {
+    padding: 0 10px;
+  }
+
+  .account {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .account a {
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 0 8px;
+  }
+
+  form {
+    margin: 0 5px;
+  }
+
+  form input {
+    min-width: 300px;
+  }
+
+  #container-offers {
+    margin-top: 35vh;
+  }
+
+  #container-offers .offers {
+    min-height: 300px;
+  }
+
+  .offers .left-o h2 {
+    font-size: 40px;
+  }
+
+  .offers .left-o button {
+    padding: 8px 15px;
+  }
+
+  .offers .left-o button:hover {
+    scale: 1.1;
+    background: black;
+    color: #FF7043;
+  }
+
+  .offers .right-o {
+    flex-direction: row;
+  }
+
+  .offers .right-o .cards {
+    width: 180px;
+    font-size: 50px;
+    margin: 0 15px;
+  }
+
+  .card-1 {
+    height: 180px;
+    transform: translateY(-150px);
+    border-radius: 10px;
+  }
+
+  .card-2 {
+    height: 150px;
+    transform: translateY(90px);
+    border-radius: 15px 15px 0 0;
+  }
+
+  #card-3 {
+    display: flex;
+    height: 180px;
+    transform: translateY(-150px);
+    border-radius: 10px;
+  }
+
+  #products-stock {
+    min-height: 100vh;
+  }
+
+  .wrapper-stock h2 {
+    font-size: 30px;
+  }
+
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .wrapper-stock .cards {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .categories {
+    margin-top: 100px;
+    min-height: 50vh;
+  }
+
+  .wrapper-categories h2 {
+    font-size: 30px;
+  }
+
+  .wrapper-categories .types-categories article {
+    width: 300px;
+    height: 200px;
+    margin: 0 15px;
+  }
+
+  footer {
+    padding: 50px 20px;
+  }
+
+  .container-footer {
+    flex-direction: row;
+  }
+
+  footer .logo a h2 {
+    font-size: 30px;
+  }
+
+  footer .rights p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (width >=1440px) {
+
+  .offers .right-o .cards {
+    width: 300px;
+    font-size: 50px;
+    margin: 0 15px;
+  }
+
+  .card-1 {
+    height: 300px;
+    transform: translateY(-150px);
+    border-radius: 15px;
+  }
+
+  .card-2 {
+    height: 150px;
+    transform: translateY(150px);
+    border-radius: 15px 15px 0 0;
+  }
+
+  #card-3 {
+    display: flex;
+    height: 300px;
+    transform: translateY(-150px);
+    border-radius: 15px;
+  }
+
+  .products {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+
+  .wrapper-stock .cards {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+
+  .bot-1,
+  .bot-2 {
+    grid-column: auto;
+  }
+
+  .categories {
+    margin-top: 100px;
+    min-height: 60vh;
+  }
+
+  .wrapper-categories h2 {
+    font-size: 40px;
+  }
+
+  .wrapper-categories .types-categories article {
+    width: 350px;
+    height: 250px;
+    margin: 0 20px;
+  }
+
+  .wrapper-categories .types-categories article h4 {
+    font-size: 25px;
+  }
+}
