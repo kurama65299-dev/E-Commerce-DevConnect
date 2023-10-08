@@ -259,6 +259,70 @@ footer {
   flex-direction: column;
 }
 
+.categories {
+  margin-top: -200px;
+  width: 100%;
+  min-height: 70vh;
+}
+
+.wrapper-categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-categories h2 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.wrapper-categories .types-categories article {
+  transition: .3s ease-in-out;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#tech {
+  background-image: url(/assets/tecnologias.webp);
+  margin-bottom: 20px;
+}
+
+#super {
+  background-image: url(/assets/supermercado.webp);
+}
+
+.wrapper-categories .types-categories article::before {
+  content: "";
+  background: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: .7;
+}
+
+.wrapper-categories .types-categories article:hover {
+  scale: 1.1;
+}
+
+.wrapper-categories .types-categories article h4 {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
 footer .logo a {
   text-decoration: none;
   color: black;
@@ -271,7 +335,7 @@ footer .logo a h2 {
 
 footer .logo a h2:hover {
   scale: 1.1;
-} 
+}
 
 footer .rights p {
   font-size: 8px;
@@ -358,12 +422,24 @@ footer .rights p {
     grid-column: 3;
   }
 
+  .types-categories {
+    display: flex;
+  }
+
+  .wrapper-categories .types-categories article {
+    margin: 0 5px;
+  }
+
+  #tech {
+    margin-bottom: 0;
+  }
+
   footer {
     padding: 25px;
   }
 }
 
-@media screen and (width >= 1024px) {
+@media screen and (width >=1024px) {
 
   header {
     height: auto;
@@ -484,6 +560,21 @@ footer .rights p {
     border-radius: 10px;
   }
 
+  .categories {
+    margin-top: 100px;
+    min-height: 50vh;
+  }
+
+  .wrapper-categories h2 {
+    font-size: 30px;
+  }
+
+  .wrapper-categories .types-categories article {
+    width: 300px;
+    height: 200px;
+    margin: 0 15px;
+  }
+
   footer {
     padding: 50px 20px;
   }
@@ -501,7 +592,7 @@ footer .rights p {
   }
 }
 
-@media screen and (width >= 1440px) {
+@media screen and (width >=1440px) {
 
   .offers .right-o .cards {
     width: 300px;
@@ -539,7 +630,27 @@ footer .rights p {
     border-radius: 15px;
   }
 
-  .bot-1, .bot-2 {
+  .bot-1,
+  .bot-2 {
     grid-column: auto;
+  }
+
+  .categories {
+    margin-top: 100px;
+    min-height: 60vh;
+  }
+
+  .wrapper-categories h2 {
+    font-size: 40px;
+  }
+
+  .wrapper-categories .types-categories article {
+    width: 350px;
+    height: 250px;
+    margin: 0 20px;
+  }
+
+  .wrapper-categories .types-categories article h4 {
+    font-size: 25px;
   }
 }
